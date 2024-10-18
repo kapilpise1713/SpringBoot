@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="UTF-8">
+<title> Bank </title>
+</head>
+<body>
+    <h2>Bank Information</h2>
+    
+    <table border="2">
+         <thead>
+               <tr>
+                  <th>ID</th>
+                  <th>NAME</th>
+                  <th>BRANCH</th>
+                  <th>IFSC CODE</th>
+               </tr>
+         </thead>
+         <tbody>
+              <tr th:each="bank:${allbanks}">
+                  <td th:text="${bank.id}"></td>
+                  <td th:text="${bank.name}"></td>
+                  <td th:text="${bank.branch}"></td>
+                  <td th:text="${bank.ifsc}"></td>
+              </tr>
+         </tbody>
+    
+    </table>
+    
+</body>
+</html>
